@@ -1,9 +1,17 @@
 from django.shortcuts import redirect,render,HttpResponse
 from netease import models
 import datetime,random
+import os
 
 def index(request):
-    return render(request,'index.html')
+    if request.method == 'GET':
+        return render(request,'index.html')
+    else:
+        url = request.POST.get('url')
+        var_song_id = url.split('=')[1]
+        os.system('echo \'' + url + '\' | sudo python3 /home/ubuntu/shejisai/static/data_process/comment_spider.py ')
+        return render(request,'result.html',locals())
+
 
 def signin(request):
     if request.method == 'GET':

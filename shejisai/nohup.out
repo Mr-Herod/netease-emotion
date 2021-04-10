@@ -1288,3 +1288,202 @@ IndexError: list index out of range
 [10/Apr/2021 17:46:43] "GET / HTTP/1.1" 200 2243
 [10/Apr/2021 17:46:50] "GET /favicon.ico HTTP/1.1" 302 0
 [10/Apr/2021 17:46:50] "GET / HTTP/1.1" 200 2243
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2021 - 12:57:39
+Django version 1.11.9, using settings 'shejisai.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Here!!! 
+MrHerod 123456 {'password': '123456'}
+Here!!! 
+MrHerod 123456 {'password': '123456'}
+Here!!! 
+MrHerod 123456 {'password': '123456'}
+Here!!! 
+MrHerod 123456 {'password': '123456'}
+Here!!! 
+MrHerod 123456 {'password': '123456'}
+Here!!! 
+zxq 123 {'password': '123'}
+Here!!! 
+MrHerod 123456 {'password': '123456'}
+Here!!! 
+Here!!! 
+Here!!! 
+Here!!! 
+Here!!! 
+Here!!! 
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 10, 2021 - 20:15:17
+Django version 1.11.9, using settings 'shejisai.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[10/Apr/2021 20:19:36] code 400, message Bad request syntax ('\x00\x00\x00¤ÿSMBr\x00\x00\x00\x00\x08\x01@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00@\x06\x00\x00\x01\x00\x00\x81\x00\x02PC NETWORK PROGRAM 1.0\x00\x02MICROSOFT NETWORKS 1.03\x00\x02MICROSOFT NETWORKS 3.0\x00\x02LANMAN1.0\x00\x02LM1.2X002\x00\x02Samba\x00\x02NT LANMAN 1.0\x00\x02NT LM 0.12\x00')
+[10/Apr/2021 20:19:36] "   ¤ÿSMBr    @              @     PC NETWORK PROGRAM 1.0 MICROSOFT NETWORKS 1.03 MICROSOFT NETWORKS 3.0 LANMAN1.0 LM1.2X002 Samba NT LANMAN 1.0 NT LM 0.12 " 400 -
+[10/Apr/2021 20:19:36] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 20:20:35] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 20:20:35] "GET /static/login_files/main.css HTTP/1.1" 304 0
+[10/Apr/2021 20:20:36] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[10/Apr/2021 20:20:36] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[10/Apr/2021 20:20:36] "GET /favicon.ico HTTP/1.1" 302 0
+[10/Apr/2021 20:20:36] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 20:20:38] "GET /favicon.ico HTTP/1.1" 302 0
+[10/Apr/2021 20:20:38] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 20:26:19] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 20:26:19] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[10/Apr/2021 20:26:19] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[10/Apr/2021 20:26:19] "GET /favicon.ico HTTP/1.1" 302 0
+[10/Apr/2021 20:26:19] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 20:26:21] "POST / HTTP/1.1" 302 0
+Internal Server Error: /index/
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/shejisai/netease/views.py", line 7, in index
+    if requst.method == 'GET':
+NameError: name 'requst' is not defined
+[10/Apr/2021 20:26:21] "GET /index/ HTTP/1.1" 500 64052
+[10/Apr/2021 20:26:22] "GET /favicon.ico HTTP/1.1" 200 2243
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 10, 2021 - 20:18:02
+Django version 1.11.9, using settings 'shejisai.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Here!!! 
+MrHerod 123456 {'password': '123456'}
+[10/Apr/2021 20:26:50] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 20:26:50] "GET /favicon.ico HTTP/1.1" 200 2243
+[10/Apr/2021 20:26:52] "POST / HTTP/1.1" 302 0
+[10/Apr/2021 20:26:52] "GET /index/ HTTP/1.1" 200 1491
+[10/Apr/2021 20:26:52] "GET /index/images/bd.png HTTP/1.1" 200 1491
+[10/Apr/2021 20:26:52] "GET /favicon.ico HTTP/1.1" 200 2243
+python3: can't open file '/home/ubuntu/shejisai/static/data_process/comments_spider.py': [Errno 2] No such file or directory
+[10/Apr/2021 20:27:14] "POST /index/ HTTP/1.1" 200 1491
+[10/Apr/2021 20:27:14] "GET /index/images/bd.png HTTP/1.1" 200 1491
+[10/Apr/2021 20:27:14] "GET /favicon.ico HTTP/1.1" 200 2243
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 10, 2021 - 20:26:47
+Django version 1.11.9, using settings 'shejisai.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Here!!! 
+MrHerod 123456 {'password': '123456'}
+Spiders begin....
+Spiders done....
+[10/Apr/2021 20:28:52] "POST /index/ HTTP/1.1" 200 1491
+[10/Apr/2021 20:28:52] "GET /index/images/bd.png HTTP/1.1" 200 1491
+[10/Apr/2021 20:28:52] "GET /favicon.ico HTTP/1.1" 200 2243
+[10/Apr/2021 20:52:59] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 20:52:59] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[10/Apr/2021 20:52:59] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[10/Apr/2021 20:53:00] "GET /favicon.ico HTTP/1.1" 200 2243
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 10, 2021 - 20:28:36
+Django version 1.11.9, using settings 'shejisai.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[10/Apr/2021 20:57:05] "POST /index/ HTTP/1.1" 302 0
+[10/Apr/2021 20:57:05] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 20:57:06] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[10/Apr/2021 20:57:06] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[10/Apr/2021 20:57:06] "GET /favicon.ico HTTP/1.1" 302 0
+[10/Apr/2021 20:57:06] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 20:57:34] "POST / HTTP/1.1" 302 0
+[10/Apr/2021 20:57:34] "GET /index/ HTTP/1.1" 200 1491
+[10/Apr/2021 20:57:34] "GET /index/images/bd.png HTTP/1.1" 200 1491
+[10/Apr/2021 20:57:34] "GET /favicon.ico HTTP/1.1" 200 2243
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Dumping model to file cache /tmp/jieba.cache
+Dump cache file failed.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/jieba/__init__.py", line 154, in initialize
+    _replace_file(fpath, cache_file)
+PermissionError: [Errno 1] Operation not permitted: '/tmp/tmp29vnnmwl' -> '/tmp/jieba.cache'
+Loading model cost 1.142 seconds.
+Prefix dict has been built successfully.
+Spiders begin....
+Spiders done....
+[10/Apr/2021 20:57:40] "POST /index/ HTTP/1.1" 200 170
+[10/Apr/2021 20:57:40] "GET /static/image/.jpg HTTP/1.1" 404 1740
+[10/Apr/2021 20:57:41] "GET /favicon.ico HTTP/1.1" 200 2243
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 10, 2021 - 20:56:34
+Django version 1.11.9, using settings 'shejisai.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Here!!! 
+MrHerod 123456 {'password': '123456'}
+[10/Apr/2021 21:00:36] "GET /favicon.ico HTTP/1.1" 200 2243
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 1.177 seconds.
+Prefix dict has been built successfully.
+Spiders begin....
+Spiders done....
+[10/Apr/2021 21:00:45] "POST /index/ HTTP/1.1" 200 178
+[10/Apr/2021 21:00:45] "GET /favicon.ico HTTP/1.1" 200 2243
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.757 seconds.
+Prefix dict has been built successfully.
+Spiders begin....
+Spiders done....
+[10/Apr/2021 21:00:55] "POST /index/ HTTP/1.1" 200 178
+[10/Apr/2021 21:00:59] "GET /static/image/28563317.jpg HTTP/1.1" 200 634275
+[10/Apr/2021 21:00:59] "GET /favicon.ico HTTP/1.1" 200 2243
+[10/Apr/2021 21:01:09] "GET /index/ HTTP/1.1" 200 1491
+[10/Apr/2021 21:01:10] "GET /favicon.ico HTTP/1.1" 200 2243
+[10/Apr/2021 21:02:22] "GET /index/ HTTP/1.1" 200 1491
+[10/Apr/2021 21:02:22] "GET /index/images/bd.png HTTP/1.1" 200 1491
+[10/Apr/2021 21:02:22] "GET /favicon.ico HTTP/1.1" 200 2243
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 1.301 seconds.
+Prefix dict has been built successfully.
+Spiders begin....
+Spiders done....
+[10/Apr/2021 21:02:35] "POST /index/ HTTP/1.1" 200 175
+[10/Apr/2021 21:02:37] "GET /static/image/65528.jpg HTTP/1.1" 200 418993
+[10/Apr/2021 21:02:37] "GET /favicon.ico HTTP/1.1" 200 2243
+[10/Apr/2021 21:04:19] "GET /index/ HTTP/1.1" 302 0
+[10/Apr/2021 21:04:19] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 21:04:19] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[10/Apr/2021 21:04:19] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[10/Apr/2021 21:04:19] "GET /favicon.ico HTTP/1.1" 302 0
+[10/Apr/2021 21:04:19] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 21:04:21] "POST / HTTP/1.1" 302 0
+[10/Apr/2021 21:04:21] "GET /index/ HTTP/1.1" 200 1491
+[10/Apr/2021 21:04:21] "GET /index/images/bd.png HTTP/1.1" 200 1491
+[10/Apr/2021 21:04:21] "GET /favicon.ico HTTP/1.1" 200 2243
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.740 seconds.
+Prefix dict has been built successfully.
+Spiders begin....
+Spiders done....
+[10/Apr/2021 21:04:28] "POST /index/ HTTP/1.1" 200 210
+[10/Apr/2021 21:04:32] "GET /static/image/28563317.jpg HTTP/1.1" 200 634275
+[10/Apr/2021 21:04:32] "GET /favicon.ico HTTP/1.1" 200 2243
+[10/Apr/2021 21:05:20] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 21:05:28] "GET / HTTP/1.0" 200 2243
+[10/Apr/2021 21:05:32] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 21:05:32] "GET /static/login_files/main.css HTTP/1.1" 200 26442
+[10/Apr/2021 21:05:32] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[10/Apr/2021 21:05:32] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
