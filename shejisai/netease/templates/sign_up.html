@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0061)http://demo.kangjingept.com:8020/cssthemes6/oascad/index.html -->
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+    <title>注册</title>            	
+	<link href="/static/login_files/main.css" media="screen" rel="stylesheet" type="text/css">
+</head>
+<body>	
+<div class="login-bg-plain stain" style="background:LightSkyBlue">
+	<div class="form-basic" id="login">
+				<div class="form-content">
+		<div class="login-header">
+			<div class="logo"><span class="color"></span> </div>
+		</div>
+		<form name="loginform" method="post">	
+			{% csrf_token %}
+			<table>
+			<tbody><tr>
+				<td><input id="email" type="text" name="username" placeholder="账号" value="" tabindex="1"></td>
+			</tr>
+			<tr>
+				<td><input type="password" name="password" placeholder="密码" value="" tabindex="2"></td>
+			</tr>
+
+				<tr><td style="text-align: center;">
+					<input type="submit" class="login-btn" value="注册" tabindex="4">
+				</td>
+			</tr><tr>
+			</tr>
+			</tbody></table>
+		</form>
+			
+			<div class="login-footer">
+		</div>
+		</div>
+	</div>
+</div>
+
+</body></html>

@@ -1,0 +1,1290 @@
+[08/Apr/2021 21:37:00] "GET / HTTP/1.1" 200 2197
+[08/Apr/2021 21:37:00] "GET /static/login_files/main.css HTTP/1.1" 200 26442
+[08/Apr/2021 21:37:00] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[08/Apr/2021 21:37:00] "GET /favicon.ico HTTP/1.1" 200 2197
+[08/Apr/2021 21:37:00] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[08/Apr/2021 21:37:03] "GET /sign_up/ HTTP/1.1" 200 1272
+[08/Apr/2021 21:37:03] "GET /favicon.ico HTTP/1.1" 200 2197
+[08/Apr/2021 21:37:04] "GET /favicon.ico HTTP/1.1" 200 2197
+[08/Apr/2021 21:37:05] "GET /sign_up/ HTTP/1.1" 200 1272
+[08/Apr/2021 21:37:05] "GET /favicon.ico HTTP/1.1" 200 2197
+[08/Apr/2021 21:37:07] "GET /favicon.ico HTTP/1.1" 200 2197
+[08/Apr/2021 21:37:08] "GET /sign_up/ HTTP/1.1" 200 1272
+[08/Apr/2021 21:37:08] "GET /favicon.ico HTTP/1.1" 200 2197
+[08/Apr/2021 21:37:10] "GET /favicon.ico HTTP/1.1" 200 2197
+[08/Apr/2021 22:11:18] "GET / HTTP/1.1" 200 2197
+[08/Apr/2021 22:11:18] "GET /static/login_files/main.css HTTP/1.1" 304 0
+[08/Apr/2021 22:11:18] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[08/Apr/2021 22:11:18] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[08/Apr/2021 22:11:18] "GET /favicon.ico HTTP/1.1" 200 2197
+[08/Apr/2021 22:12:20] "GET /sign_up/ HTTP/1.1" 200 1272
+[08/Apr/2021 22:12:20] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[08/Apr/2021 22:12:20] "GET /favicon.ico HTTP/1.1" 200 2197
+[08/Apr/2021 22:12:22] "GET /favicon.ico HTTP/1.1" 200 2197
+[08/Apr/2021 23:06:15] "GET / HTTP/1.1" 200 2197
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 252, in send_preamble
+    self._write(('HTTP/%s %s\r\n' % (self.http_version,self.status)).encode('iso-8859-1'))
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[08/Apr/2021 23:06:15] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('183.136.225.20', 26242)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 252, in send_preamble
+    self._write(('HTTP/%s %s\r\n' % (self.http_version,self.status)).encode('iso-8859-1'))
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 88, in handle_error
+    super(ServerHandler, self).handle_error()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 155, in handle
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[08/Apr/2021 23:06:15] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x8e))¥\x0ehLz\x81\x1bgÌ\x07¼¡\x86o$\x02êSP')
+[08/Apr/2021 23:06:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[09/Apr/2021 00:03:23] "GET / HTTP/1.1" 200 2197
+[09/Apr/2021 00:03:23] "GET /static/login_files/main.css HTTP/1.1" 304 0
+[09/Apr/2021 00:03:23] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 00:03:23] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 00:03:23] "GET /favicon.ico HTTP/1.1" 200 2197
+[09/Apr/2021 00:29:40] "GET / HTTP/1.1" 200 2197
+[09/Apr/2021 00:29:40] "GET /static/login_files/main.css HTTP/1.1" 304 0
+[09/Apr/2021 00:29:40] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 00:29:40] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 00:29:40] "GET /favicon.ico HTTP/1.1" 200 2197
+[09/Apr/2021 00:29:51] "GET /favicon.ico HTTP/1.1" 200 2197
+[09/Apr/2021 00:30:51] "GET / HTTP/1.1" 200 2136
+[09/Apr/2021 00:30:51] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 00:30:51] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 00:30:51] "GET /favicon.ico HTTP/1.1" 200 2136
+Forbidden (CSRF cookie not set.): /
+[09/Apr/2021 00:30:52] "POST / HTTP/1.1" 403 2829
+[09/Apr/2021 00:30:53] "GET /favicon.ico HTTP/1.1" 200 2136
+[09/Apr/2021 00:30:55] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 00:30:55] "GET /favicon.ico HTTP/1.1" 200 2136
+Forbidden (CSRF cookie not set.): /
+[09/Apr/2021 00:30:56] "POST / HTTP/1.1" 403 2829
+[09/Apr/2021 00:30:57] "GET /favicon.ico HTTP/1.1" 200 2136
+[09/Apr/2021 00:30:58] "GET /favicon.ico HTTP/1.1" 200 2136
+[09/Apr/2021 00:30:59] "GET /sign_up/ HTTP/1.1" 200 1272
+[09/Apr/2021 00:30:59] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 00:31:00] "GET /favicon.ico HTTP/1.1" 200 2136
+Forbidden (CSRF cookie not set.): /sign_up/
+[09/Apr/2021 00:31:01] "POST /sign_up/ HTTP/1.1" 403 2829
+[09/Apr/2021 00:31:01] "GET /favicon.ico HTTP/1.1" 200 2136
+[09/Apr/2021 00:31:03] "GET /favicon.ico HTTP/1.1" 200 2136
+[09/Apr/2021 00:31:04] "GET /favicon.ico HTTP/1.1" 200 2136
+[09/Apr/2021 00:31:37] "GET / HTTP/1.1" 200 2136
+[09/Apr/2021 00:31:37] "GET /favicon.ico HTTP/1.1" 200 2136
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+April 08, 2021 - 21:36:28
+Django version 1.11.9, using settings 'shejisai.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x7f0afc942d90>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/utils/autoreload.py", line 228, in wrapper
+    fn(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/utils/autoreload.py", line 251, in raise_last_exception
+    six.reraise(*_exception)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/utils/autoreload.py", line 228, in wrapper
+    fn(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/apps/registry.py", line 116, in populate
+    app_config.ready()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/contrib/admin/apps.py", line 23, in ready
+    self.module.autodiscover()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/utils/module_loading.py", line 50, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/shejisai/netease/admin.py", line 5, in <module>
+    dmin.site.register(models.Users)
+NameError: name 'dmin' is not defined
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x7f2dbd1c1d90>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/utils/autoreload.py", line 228, in wrapper
+    fn(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/utils/autoreload.py", line 251, in raise_last_exception
+    six.reraise(*_exception)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/utils/autoreload.py", line 228, in wrapper
+    fn(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/apps/registry.py", line 116, in populate
+    app_config.ready()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/contrib/admin/apps.py", line 23, in ready
+    self.module.autodiscover()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/utils/module_loading.py", line 50, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/shejisai/netease/admin.py", line 5, in <module>
+    admin.site.register(models.Users)
+NameError: name 'models' is not defined
+[09/Apr/2021 01:08:46] "GET / HTTP/1.1" 200 2136
+[09/Apr/2021 01:08:46] "GET /static/login_files/main.css HTTP/1.1" 304 0
+[09/Apr/2021 01:08:46] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 01:08:46] "GET /favicon.ico HTTP/1.1" 200 2136
+[09/Apr/2021 01:08:46] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 01:08:47] "GET / HTTP/1.1" 200 2136
+[09/Apr/2021 01:08:47] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 01:08:47] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 01:08:47] "GET /favicon.ico HTTP/1.1" 200 2136
+[09/Apr/2021 01:08:49] "GET /sign_up/ HTTP/1.1" 200 1272
+[09/Apr/2021 01:08:49] "GET /favicon.ico HTTP/1.1" 200 2136
+Forbidden (CSRF token missing or incorrect.): /sign_up/
+[09/Apr/2021 01:13:47] "POST /sign_up/ HTTP/1.1" 403 2497
+[09/Apr/2021 01:13:48] "GET /favicon.ico HTTP/1.1" 200 2136
+[09/Apr/2021 01:13:56] "GET /favicon.ico HTTP/1.1" 200 2136
+[09/Apr/2021 01:13:57] "GET /favicon.ico HTTP/1.1" 200 2136
+[09/Apr/2021 05:08:08] code 400, message Bad request syntax ('\x00\x00\x00¤ÿSMBr\x00\x00\x00\x00\x08\x01@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00@\x06\x00\x00\x01\x00\x00\x81\x00\x02PC NETWORK PROGRAM 1.0\x00\x02MICROSOFT NETWORKS 1.03\x00\x02MICROSOFT NETWORKS 3.0\x00\x02LANMAN1.0\x00\x02LM1.2X002\x00\x02Samba\x00\x02NT LANMAN 1.0\x00\x02NT LM 0.12\x00')
+[09/Apr/2021 05:08:08] "   ¤ÿSMBr    @              @     PC NETWORK PROGRAM 1.0 MICROSOFT NETWORKS 1.03 MICROSOFT NETWORKS 3.0 LANMAN1.0 LM1.2X002 Samba NT LANMAN 1.0 NT LM 0.12 " 400 -
+[09/Apr/2021 05:08:08] "GET / HTTP/1.1" 200 2136
+[09/Apr/2021 11:33:10] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 11:33:10] "GET /static/login_files/main.css HTTP/1.1" 304 0
+[09/Apr/2021 11:33:10] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 11:33:10] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 11:33:10] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 11:33:11] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 11:33:12] "POST / HTTP/1.1" 200 2243
+[09/Apr/2021 11:33:12] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 11:33:14] "POST / HTTP/1.1" 200 2243
+[09/Apr/2021 11:33:14] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 11:33:14] "POST / HTTP/1.1" 200 2243
+[09/Apr/2021 11:33:15] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 11:33:15] "POST / HTTP/1.1" 200 2243
+[09/Apr/2021 11:33:15] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 11:33:16] "POST / HTTP/1.1" 200 2243
+[09/Apr/2021 11:33:16] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 11:33:17] "POST / HTTP/1.1" 200 2243
+[09/Apr/2021 11:33:17] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 11:33:17] "POST / HTTP/1.1" 200 2243
+[09/Apr/2021 11:33:17] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 11:33:18] "POST / HTTP/1.1" 200 2243
+[09/Apr/2021 11:33:18] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 11:34:10] "POST / HTTP/1.1" 200 2243
+[09/Apr/2021 11:34:11] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 11:34:11] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 11:34:11] "GET /favicon.ico HTTP/1.1" 200 2243
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2021 - 01:05:07
+Django version 1.11.9, using settings 'shejisai.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2021 - 12:26:52
+Django version 1.11.9, using settings 'shejisai.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/utils/deprecation.py", line 138, in __call__
+    response = self.process_request(request)
+  File "/home/ubuntu/shejisai/netease/utils/middlewares.py", line 15, in process_request
+    return redirect('sign_in')
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/shortcuts.py", line 56, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/shortcuts.py", line 147, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'sign_in' not found. 'sign_in' is not a valid view function or pattern name.
+[09/Apr/2021 12:35:06] "GET / HTTP/1.1" 500 76075
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/utils/deprecation.py", line 138, in __call__
+    response = self.process_request(request)
+  File "/home/ubuntu/shejisai/netease/utils/middlewares.py", line 15, in process_request
+    return redirect('sign_in')
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/shortcuts.py", line 56, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/shortcuts.py", line 147, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'sign_in' not found. 'sign_in' is not a valid view function or pattern name.
+[09/Apr/2021 12:35:07] "GET /favicon.ico HTTP/1.1" 500 76129
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2021 - 12:34:53
+Django version 1.11.9, using settings 'shejisai.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[09/Apr/2021 12:36:18] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:18] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:18] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:18] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:18] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:18] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:18] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:18] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:18] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:18] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:18] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:18] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:18] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:18] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:18] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:18] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:18] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:19] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:19] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:19] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:20] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:20] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:20] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:20] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:20] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:20] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:20] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:20] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:20] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:20] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:20] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:20] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:20] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:20] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:21] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:21] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:21] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:21] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:21] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:21] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:26] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:26] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:26] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:26] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:26] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:26] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:26] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:26] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:26] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:26] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:26] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:26] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:27] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:27] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:27] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:27] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:27] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:27] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:27] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:27] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:41] "GET /sign_up/ HTTP/1.1" 200 1377
+[09/Apr/2021 12:36:41] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 12:36:41] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:36:41] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:41] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:41] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:41] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:41] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:41] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:41] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:41] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:41] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:41] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:41] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:42] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:42] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:42] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:42] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:42] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:42] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:42] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:42] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:42] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:45] "GET /sign_in/ HTTP/1.1" 200 2243
+[09/Apr/2021 12:36:45] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 12:36:45] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:36:45] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:45] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:46] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:46] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:46] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:46] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:46] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:46] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:46] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:46] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:46] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:46] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:46] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:46] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:46] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:46] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:46] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:46] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:46] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:36:47] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:43] "GET /admin/ HTTP/1.1" 302 0
+[09/Apr/2021 12:37:43] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1652
+[09/Apr/2021 12:37:43] "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+[09/Apr/2021 12:37:43] "GET /static/admin/css/base.css HTTP/1.1" 200 16066
+[09/Apr/2021 12:37:43] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[09/Apr/2021 12:37:43] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:37:43] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+[09/Apr/2021 12:37:43] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:43] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[09/Apr/2021 12:37:43] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:43] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:43] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:43] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:43] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:43] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:43] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:44] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:44] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:44] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:44] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:44] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:44] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:44] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:44] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:44] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:44] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:44] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:44] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:47] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:37:47] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:47] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:47] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:47] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:47] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:47] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:47] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:48] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:48] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:48] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:48] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:48] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:48] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:48] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:48] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:48] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:48] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:48] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:48] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:37:48] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:51] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:51] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:51] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:51] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:51] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:51] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:51] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:51] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:51] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:51] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:51] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:51] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:51] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:51] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:52] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:52] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:52] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:52] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:52] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:52] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:52] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:52] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:52] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:53] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:53] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:53] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:53] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:53] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:53] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:53] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:53] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:54] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:54] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:54] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:54] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:54] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:54] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:54] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:54] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:54] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:54] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:54] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:54] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:59] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:59] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:59] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:59] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:59] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:39:59] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:00] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:00] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:00] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:00] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:00] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:00] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:00] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:00] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:00] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:00] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:00] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:00] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:00] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:00] "GET / HTTP/1.1" 302 0
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2021 - 12:36:15
+Django version 1.11.9, using settings 'shejisai.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[09/Apr/2021 12:40:17] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:17] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:17] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:17] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:17] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:17] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:17] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:17] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:17] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:17] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:17] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:17] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:17] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:17] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:17] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:17] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:18] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:18] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:18] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:40:18] "GET / HTTP/1.1" 302 0
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2021 - 12:40:03
+Django version 1.11.9, using settings 'shejisai.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[09/Apr/2021 12:41:58] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:41:59] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 12:41:59] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 12:41:59] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:41:59] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:42:01] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:42:01] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:42:01] "GET / HTTP/1.1" 200 2243
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2021 - 12:41:57
+Django version 1.11.9, using settings 'shejisai.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[09/Apr/2021 12:43:00] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:00] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:00] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:00] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:00] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:01] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:01] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:01] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:01] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:01] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:01] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:01] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:01] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:01] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:01] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:01] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:01] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:01] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:01] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:01] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:02] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:02] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:03] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:03] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:03] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:03] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:03] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:03] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:03] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:03] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:03] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:03] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:03] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:03] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:03] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:03] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:03] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:03] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:03] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:03] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:09] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:09] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:09] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:09] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:09] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:09] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:09] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:09] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:09] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:09] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:09] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:09] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:09] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:09] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:09] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:09] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:09] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:09] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:10] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:10] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:40] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:40] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:40] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:40] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:40] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:40] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:40] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:40] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:40] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:40] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:40] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:40] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:40] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:40] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:40] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:41] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:41] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:41] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:41] "GET / HTTP/1.1" 302 0
+[09/Apr/2021 12:43:41] "GET / HTTP/1.1" 302 0
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2021 - 12:42:59
+Django version 1.11.9, using settings 'shejisai.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[09/Apr/2021 12:44:08] "GET /haha/ HTTP/1.1" 302 0
+[09/Apr/2021 12:44:08] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:44:08] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 12:44:08] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 12:44:08] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:44:08] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:44:46] "GET /sign_up/ HTTP/1.1" 200 1377
+[09/Apr/2021 12:44:46] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 12:44:46] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:44:47] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:44:50] "POST /sign_up/ HTTP/1.1" 200 1377
+[09/Apr/2021 12:44:50] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 12:44:50] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:44:50] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:44:51] "POST /sign_up/ HTTP/1.1" 200 1377
+[09/Apr/2021 12:44:51] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 12:44:51] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:44:51] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:44:51] "POST /sign_up/ HTTP/1.1" 200 1377
+[09/Apr/2021 12:44:52] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:44:52] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:44:54] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:44:54] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:44:55] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:44:55] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:44:56] "GET /sign_up/ HTTP/1.1" 200 1377
+[09/Apr/2021 12:44:56] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:44:56] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:44:56] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:44:56] "GET / HTTP/1.1" 200 2243
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2021 - 12:44:00
+Django version 1.11.9, using settings 'shejisai.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2021 - 12:49:08
+Django version 1.11.9, using settings 'shejisai.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2021 - 12:49:35
+Django version 1.11.9, using settings 'shejisai.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2021 - 12:52:19
+Django version 1.11.9, using settings 'shejisai.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/shejisai/netease/views.py", line 14, in signin
+    pwd = models.Users.objects.filter(username = username).values('password')[0]
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/query.py", line 289, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[09/Apr/2021 12:52:51] "POST / HTTP/1.1" 500 69042
+[09/Apr/2021 12:52:52] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:52:52] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:53:14] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:53:14] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:53:17] "GET /sign_up/ HTTP/1.1" 200 1377
+[09/Apr/2021 12:53:18] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 12:53:18] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:53:18] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:53:26] "POST /sign_up/ HTTP/1.1" 302 0
+[09/Apr/2021 12:53:26] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:53:26] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 12:53:26] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 12:53:26] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:53:26] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:53:32] "POST / HTTP/1.1" 302 0
+[09/Apr/2021 12:53:32] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:53:32] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 12:53:32] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 12:53:32] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:53:32] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:54:05] "POST / HTTP/1.1" 302 0
+[09/Apr/2021 12:54:05] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:54:06] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 12:54:06] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 12:54:06] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:54:06] "GET / HTTP/1.1" 200 2243
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2021 - 12:52:49
+Django version 1.11.9, using settings 'shejisai.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[09/Apr/2021 12:55:22] "POST / HTTP/1.1" 302 0
+[09/Apr/2021 12:55:22] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:55:22] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 12:55:22] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 12:55:22] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:55:22] "GET / HTTP/1.1" 200 2243
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/shejisai/netease/views.py", line 14, in signin
+    pwd = models.Users.objects.filter(username = username).values('password')[0]
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/query.py", line 289, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[09/Apr/2021 12:56:20] "POST / HTTP/1.1" 500 69059
+[09/Apr/2021 12:56:20] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:56:20] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:56:26] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:56:26] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:56:34] "POST / HTTP/1.1" 302 0
+[09/Apr/2021 12:56:34] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:56:34] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 12:56:34] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 12:56:34] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 12:56:34] "GET / HTTP/1.1" 200 2243
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2021 - 12:55:14
+Django version 1.11.9, using settings 'shejisai.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+MrHerod 123456 {'password': '123456'}
+MrHerod 123456 {'password': '123456'}
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2021 - 12:57:08
+Django version 1.11.9, using settings 'shejisai.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[09/Apr/2021 12:57:47] "POST / HTTP/1.1" 302 0
+[09/Apr/2021 12:57:47] "GET /index/ HTTP/1.1" 200 20
+[09/Apr/2021 12:57:48] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 12:57:56] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 12:57:56] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 12:58:02] "GET /index/ HTTP/1.1" 200 20
+[09/Apr/2021 12:58:02] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 12:58:03] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 12:58:06] "GET /sign_up/ HTTP/1.1" 200 1377
+[09/Apr/2021 12:58:06] "GET /static/login_files/main.css HTTP/1.1" 304 0
+[09/Apr/2021 12:58:06] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 12:58:06] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 12:58:08] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 12:58:09] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 12:58:42] "POST / HTTP/1.1" 302 0
+[09/Apr/2021 12:58:42] "GET /index/ HTTP/1.1" 200 20
+[09/Apr/2021 12:58:42] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 13:18:05] "GET / HTTP/1.0" 200 2243
+[09/Apr/2021 13:19:23] "GET /index/ HTTP/1.1" 200 20
+[09/Apr/2021 13:19:23] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 13:19:27] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 13:19:27] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 13:19:27] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 13:19:27] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 13:19:33] "POST / HTTP/1.1" 302 0
+[09/Apr/2021 13:19:33] "GET /index/ HTTP/1.1" 200 20
+[09/Apr/2021 13:19:33] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 13:19:35] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 13:19:35] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 13:19:42] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 13:24:22] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 13:24:22] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 13:24:22] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 13:24:22] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 13:25:16] "GET /static/image/logo.png HTTP/1.1" 200 23530
+[09/Apr/2021 13:25:17] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 13:25:20] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 13:25:23] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 13:25:24] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 13:25:24] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 13:25:24] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 13:25:24] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 13:25:24] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 13:25:24] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 13:25:25] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 13:25:25] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 13:25:25] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 13:25:25] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 13:25:26] "GET /sign_up/ HTTP/1.1" 200 1377
+[09/Apr/2021 13:25:26] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 13:25:28] "GET /favicon.ico HTTP/1.1" 200 2243
+Forbidden (CSRF token missing or incorrect.): /
+[09/Apr/2021 13:25:30] "POST / HTTP/1.1" 403 2497
+[09/Apr/2021 13:25:30] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 13:25:32] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 14:20:02] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 14:20:03] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 14:20:03] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 14:20:03] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 14:20:03] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 14:20:03] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 14:20:06] "POST / HTTP/1.1" 302 0
+[09/Apr/2021 14:20:06] "GET /index/ HTTP/1.1" 200 1286
+[09/Apr/2021 14:20:06] "GET /index/echarts.js HTTP/1.1" 200 1286
+[09/Apr/2021 14:20:06] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 14:20:48] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 14:24:04] "GET /index/ HTTP/1.1" 200 1406
+[09/Apr/2021 14:24:04] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 14:26:58] "GET /index/ HTTP/1.1" 200 1236
+[09/Apr/2021 14:26:58] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 14:30:04] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 14:36:11] "GET /index/ HTTP/1.1" 200 1214
+[09/Apr/2021 14:36:11] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 14:47:48] code 400, message Bad request syntax ('\x00\x00\x00¤ÿSMBr\x00\x00\x00\x00\x08\x01@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00@\x06\x00\x00\x01\x00\x00\x81\x00\x02PC NETWORK PROGRAM 1.0\x00\x02MICROSOFT NETWORKS 1.03\x00\x02MICROSOFT NETWORKS 3.0\x00\x02LANMAN1.0\x00\x02LM1.2X002\x00\x02Samba\x00\x02NT LANMAN 1.0\x00\x02NT LM 0.12\x00')
+[09/Apr/2021 14:47:48] "   ¤ÿSMBr    @              @     PC NETWORK PROGRAM 1.0 MICROSOFT NETWORKS 1.03 MICROSOFT NETWORKS 3.0 LANMAN1.0 LM1.2X002 Samba NT LANMAN 1.0 NT LM 0.12 " 400 -
+[09/Apr/2021 14:47:48] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 15:09:59] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[09/Apr/2021 15:09:59] "  /*à     Cookie: mstshash=Administr" 400 -
+[09/Apr/2021 15:14:57] "GET /index/ HTTP/1.1" 200 1920
+[09/Apr/2021 15:14:57] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 15:15:03] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 15:15:03] "GET /static/login_files/main.css HTTP/1.1" 304 0
+[09/Apr/2021 15:15:03] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 15:15:03] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 15:15:03] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 15:15:06] "POST / HTTP/1.1" 302 0
+[09/Apr/2021 15:15:06] "GET /index/ HTTP/1.1" 200 1920
+[09/Apr/2021 15:15:06] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 15:21:53] "GET /index/ HTTP/1.1" 200 3058
+[09/Apr/2021 15:21:53] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 15:24:44] "GET /index/ HTTP/1.1" 200 3050
+[09/Apr/2021 15:24:45] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 15:45:13] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 15:45:14] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 15:45:14] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 15:45:14] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 15:45:14] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 15:45:18] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 15:45:18] "GET /static/login_files/main.css HTTP/1.1" 200 26442
+[09/Apr/2021 15:45:18] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 15:45:18] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 15:45:18] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 15:45:18] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 15:45:27] "GET /sign_up/ HTTP/1.1" 200 1377
+[09/Apr/2021 15:45:28] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 15:45:28] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 15:45:28] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 15:45:35] "POST /sign_up/ HTTP/1.1" 302 0
+[09/Apr/2021 15:45:35] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 15:45:36] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 15:45:36] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 15:45:36] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 15:45:36] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 15:45:47] "POST / HTTP/1.1" 302 0
+[09/Apr/2021 15:45:47] "GET /index/ HTTP/1.1" 200 3050
+[09/Apr/2021 15:45:48] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 15:45:48] "GET /favicon.ico HTTP/1.1" 200 2243
+[09/Apr/2021 15:49:18] "POST / HTTP/1.1" 302 0
+[09/Apr/2021 15:49:19] "GET /index/ HTTP/1.1" 200 3050
+[09/Apr/2021 15:49:19] "GET /favicon.ico HTTP/1.1" 200 2243
+----------------------------------------
+Exception happened during processing of request from ('74.120.14.56', 59746)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 140, in handle
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[09/Apr/2021 16:08:43] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03¸\x8d@Å]Ç®Çl~*¿â\x80ù-#R\x97LÕ\x94`¯»zÈ\x9a\x9c"Õ&\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[09/Apr/2021 16:08:43] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[09/Apr/2021 16:08:45] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 16:08:45] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 17:30:52] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[09/Apr/2021 17:30:52] "  /*à     Cookie: mstshash=Administr" 400 -
+----------------------------------------
+Exception happened during processing of request from ('45.155.205.209', 62163)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 148, in handle
+    if not self.parse_request():  # An error code has been sent, just exit
+  File "/usr/lib/python3.6/http/server.py", line 315, in parse_request
+    "Bad HTTP/0.9 request type (%r)" % command)
+  File "/usr/lib/python3.6/http/server.py", line 473, in send_error
+    self.wfile.write(body)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[09/Apr/2021 18:25:12] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[09/Apr/2021 18:25:12] "  /*à     Cookie: mstshash=Administr" 400 -
+[09/Apr/2021 18:35:32] "GET / HTTP/1.0" 200 2243
+[09/Apr/2021 18:35:55] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:35:55] "GET /static/login_files/main.css HTTP/1.1" 200 26442
+[09/Apr/2021 18:35:55] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 18:35:55] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 18:35:55] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 18:35:55] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:35:57] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:35:57] "GET /static/login_files/main.css HTTP/1.1" 200 26442
+[09/Apr/2021 18:35:57] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 18:35:57] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 18:35:58] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 18:35:58] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:36:00] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:36:00] "GET /static/login_files/main.css HTTP/1.1" 200 26442
+[09/Apr/2021 18:36:00] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 18:36:00] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 18:36:00] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 18:36:00] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:36:01] "GET /sign_up/ HTTP/1.1" 200 1377
+[09/Apr/2021 18:36:01] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 18:36:01] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:36:04] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 18:36:05] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:36:12] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:36:12] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 18:36:12] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 18:36:13] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 18:36:13] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:36:15] "GET /sign_up/ HTTP/1.1" 200 1377
+[09/Apr/2021 18:36:16] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 18:36:16] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:36:19] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 18:36:19] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:36:24] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:36:25] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 18:36:25] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 18:36:25] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 18:36:25] "GET / HTTP/1.1" 200 2243
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/shejisai/netease/views.py", line 15, in signin
+    pwd = models.Users.objects.filter(username = username).values('password')[0]
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/query.py", line 289, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[09/Apr/2021 18:36:27] "POST / HTTP/1.1" 500 69439
+[09/Apr/2021 18:36:28] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 18:36:28] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:36:32] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 18:36:32] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:36:33] "GET /sign_up/ HTTP/1.1" 200 1377
+[09/Apr/2021 18:36:34] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 18:36:34] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:36:35] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:36:35] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 18:36:35] "GET / HTTP/1.1" 200 2243
+Forbidden (CSRF token missing or incorrect.): /
+[09/Apr/2021 18:36:36] "POST / HTTP/1.1" 403 2497
+[09/Apr/2021 18:36:36] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 18:36:36] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:36:37] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 18:36:37] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:36:39] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 18:36:39] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:36:40] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 18:36:41] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:36:42] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 18:36:42] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:37:00] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:37:01] "GET /sign_up HTTP/1.1" 200 2243
+[09/Apr/2021 18:37:33] "GET /sign_up HTTP/1.1" 200 2243
+[09/Apr/2021 18:41:54] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:41:55] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 18:41:55] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 18:41:55] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 18:41:55] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:41:57] "GET /sign_up/ HTTP/1.1" 200 1377
+[09/Apr/2021 18:41:57] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 18:41:57] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 18:42:00] "GET /favicon.ico HTTP/1.1" 302 0
+[09/Apr/2021 18:42:00] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 19:11:51] "GET / HTTP/1.1" 200 2243
+[09/Apr/2021 19:11:51] "GET /static/login_files/main.css HTTP/1.1" 200 26442
+[09/Apr/2021 19:11:51] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[09/Apr/2021 19:11:51] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[09/Apr/2021 19:57:36] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[09/Apr/2021 19:57:36] "  /*à     Cookie: mstshash=Administr" 400 -
+[10/Apr/2021 00:40:09] code 400, message Bad request syntax ('\x00\x00\x00¤ÿSMBr\x00\x00\x00\x00\x08\x01@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00@\x06\x00\x00\x01\x00\x00\x81\x00\x02PC NETWORK PROGRAM 1.0\x00\x02MICROSOFT NETWORKS 1.03\x00\x02MICROSOFT NETWORKS 3.0\x00\x02LANMAN1.0\x00\x02LM1.2X002\x00\x02Samba\x00\x02NT LANMAN 1.0\x00\x02NT LM 0.12\x00')
+[10/Apr/2021 00:40:09] "   ¤ÿSMBr    @              @     PC NETWORK PROGRAM 1.0 MICROSOFT NETWORKS 1.03 MICROSOFT NETWORKS 3.0 LANMAN1.0 LM1.2X002 Samba NT LANMAN 1.0 NT LM 0.12 " 400 -
+[10/Apr/2021 00:40:09] "GET / HTTP/1.1" 200 2243
+----------------------------------------
+Exception happened during processing of request from ('162.142.125.55', 43126)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 140, in handle
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[10/Apr/2021 01:48:35] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03`¨ÇußkA\x1e¡oÍ\x0bó\x08`\r©ô}oaå\x12\x1c\x13\x92\x90-\xa08\x80\x9d\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[10/Apr/2021 01:48:35] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Apr/2021 01:48:37] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 01:48:37] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 01:54:01] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[10/Apr/2021 01:54:01] "  /*à     Cookie: mstshash=Administr" 400 -
+[10/Apr/2021 01:55:03] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[10/Apr/2021 01:55:03] "  /*à     Cookie: mstshash=Administr" 400 -
+----------------------------------------
+Exception happened during processing of request from ('167.248.133.56', 49476)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 140, in handle
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[10/Apr/2021 05:02:25] code 400, message Bad request version ('À\x14À')
+[10/Apr/2021 05:02:25] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Apr/2021 05:02:26] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 05:02:26] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 06:31:55] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[10/Apr/2021 06:31:55] "  /*à     Cookie: mstshash=Administr" 400 -
+[10/Apr/2021 06:44:35] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[10/Apr/2021 07:33:00] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 10:05:55] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[10/Apr/2021 10:33:24] code 400, message Bad request syntax ('\x00\x00\x00¤ÿSMBr\x00\x00\x00\x00\x08\x01@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00@\x06\x00\x00\x01\x00\x00\x81\x00\x02PC NETWORK PROGRAM 1.0\x00\x02MICROSOFT NETWORKS 1.03\x00\x02MICROSOFT NETWORKS 3.0\x00\x02LANMAN1.0\x00\x02LM1.2X002\x00\x02Samba\x00\x02NT LANMAN 1.0\x00\x02NT LM 0.12\x00')
+[10/Apr/2021 10:33:24] "   ¤ÿSMBr    @              @     PC NETWORK PROGRAM 1.0 MICROSOFT NETWORKS 1.03 MICROSOFT NETWORKS 3.0 LANMAN1.0 LM1.2X002 Samba NT LANMAN 1.0 NT LM 0.12 " 400 -
+[10/Apr/2021 10:33:24] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 14:17:35] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 14:17:35] "GET /static/login_files/main.css HTTP/1.1" 200 26442
+[10/Apr/2021 14:17:35] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[10/Apr/2021 14:17:35] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+Forbidden (CSRF token missing or incorrect.): /
+[10/Apr/2021 14:17:37] "POST / HTTP/1.1" 403 2497
+[10/Apr/2021 14:17:40] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 14:18:35] "GET / HTTP/1.1" 200 2243
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/shejisai/netease/views.py", line 15, in signin
+    pwd = models.Users.objects.filter(username = username).values('password')[0]
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/query.py", line 289, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[10/Apr/2021 14:20:20] "POST / HTTP/1.1" 500 69276
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/shejisai/netease/views.py", line 15, in signin
+    pwd = models.Users.objects.filter(username = username).values('password')[0]
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/query.py", line 289, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[10/Apr/2021 14:20:34] "POST / HTTP/1.1" 500 69264
+Forbidden (CSRF token missing or incorrect.): /
+[10/Apr/2021 14:20:37] "POST / HTTP/1.1" 403 2497
+[10/Apr/2021 14:24:41] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[10/Apr/2021 14:24:41] "  /*à     Cookie: mstshash=Administr" 400 -
+[10/Apr/2021 15:27:47] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[10/Apr/2021 15:27:47] "  /*à     Cookie: mstshash=Administr" 400 -
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/shejisai/netease/views.py", line 15, in signin
+    pwd = models.Users.objects.filter(username = username).values('password')[0]
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/query.py", line 289, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[10/Apr/2021 16:12:44] "HEAD / HTTP/1.1" 500 66752
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[10/Apr/2021 16:12:44] "HEAD / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('121.46.142.244', 45140)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 88, in handle_error
+    super(ServerHandler, self).handle_error()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 155, in handle
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[10/Apr/2021 17:46:02] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 17:46:02] "GET /static/login_files/main.css HTTP/1.1" 304 0
+[10/Apr/2021 17:46:02] "GET /static/images/logo.png HTTP/1.1" 404 1755
+[10/Apr/2021 17:46:02] "GET /static/images/logo/google-logo.svg HTTP/1.1" 404 1791
+[10/Apr/2021 17:46:02] "GET /favicon.ico HTTP/1.1" 302 0
+[10/Apr/2021 17:46:02] "GET / HTTP/1.1" 200 2243
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/shejisai/netease/views.py", line 15, in signin
+    pwd = models.Users.objects.filter(username = username).values('password')[0]
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/query.py", line 289, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[10/Apr/2021 17:46:04] "POST / HTTP/1.1" 500 69450
+[10/Apr/2021 17:46:04] "GET /favicon.ico HTTP/1.1" 302 0
+[10/Apr/2021 17:46:04] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 17:46:05] "GET /favicon.ico HTTP/1.1" 302 0
+[10/Apr/2021 17:46:05] "GET / HTTP/1.1" 200 2243
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/shejisai/netease/views.py", line 15, in signin
+    pwd = models.Users.objects.filter(username = username).values('password')[0]
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/query.py", line 289, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[10/Apr/2021 17:46:43] "POST / HTTP/1.1" 500 69450
+[10/Apr/2021 17:46:43] "GET /favicon.ico HTTP/1.1" 302 0
+[10/Apr/2021 17:46:43] "GET / HTTP/1.1" 200 2243
+[10/Apr/2021 17:46:50] "GET /favicon.ico HTTP/1.1" 302 0
+[10/Apr/2021 17:46:50] "GET / HTTP/1.1" 200 2243
