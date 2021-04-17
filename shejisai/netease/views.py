@@ -3,15 +3,37 @@ from netease import models
 import datetime,random
 import os
 
-def index(request):
+def add(request):
     if request.method == 'GET':
-        return render(request,'index.html')
+        return render(request,"add.html")
+    else:
+        exp = request.POST.get('exp')
+        res = eval(exp)
+        return render(request,"res.html",locals())
+
+def index(request):
+    return render(request,'index.html')
+
+def analyse(request):
+    if request.method == 'GET':
+        return render(request,'analyse.html')
     else:
         url = request.POST.get('url')
         var_song_id = url.split('=')[1]
         os.system('echo \'' + url + '\' | sudo python3 /home/ubuntu/shejisai/static/data_process/comment_spider.py ')
         return render(request,'result.html',locals())
 
+def profile(request):
+    return render(request,"profile.html")
+
+def recommend(request):
+    return render(request,"recommend.html")
+
+def history(request):
+    return render(request,"history.html")
+
+def like(request):
+    return render(request,"like.html")
 
 def signin(request):
     if request.method == 'GET':

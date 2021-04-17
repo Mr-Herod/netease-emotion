@@ -23,6 +23,12 @@ urlpatterns = [
     url(r'^sign_up/',views.signup,name='signup'),
     url(r'^sign_in/',views.signin,name='signin'),
     url(r'^index/',views.index,name='index'),
+    url(r'^profile/',views.profile,name='profile'),
+    url(r'^analyse/',views.analyse,name='analyse'),
+    url(r'^history/',views.history,name='history'),
+    url(r'^like/',views.like,name='like'),
+    url(r'^add/',views.add,name='add'),
+    url(r'^recommend/',views.recommend,name='recommend'),
     url(r'^/',views.signin,name='signin'),
     url(r'^',views.signin,name='signin'),
 ]

@@ -18,6 +18,46 @@ $(window).load(function() {
   });
 });
 </script>
+    <style>
+	*{
+		margin:0;
+	}
+
+        .x{
+            display: inline-block;
+            margin-top: 200px;
+            margin-left: 300px;
+            position: relative;
+        }
+        .k{
+            width: 536px;
+            height: 38px;
+            border: 1px solid #cccccc;
+            float: left;
+            box-sizing: border-box;
+        }
+        .n{
+            width: 102px;
+            height: 38px;
+            line-height: 40px;
+            float: left;
+            background-color: #38f;
+            font-size: 16px;
+            /*鼠标悬停按钮上方，光标成手指样式*/
+            cursor: pointer;
+        }
+        .t{
+            z-index: 1;
+            position: absolute;
+            right: 113px;
+            top: 50%;
+            margin-top: -8px;
+            height: 16px;
+            width: 18px;
+            background: url("images/bd.png");
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -51,26 +91,13 @@ $(window).load(function() {
     </div>
 </div>
 <!--头部-->
-<!--幻灯片-->
-<div class="banner">
-	<div class="slider">
-        <div class="flexslider">
-          
-        <div class="flex-viewport" style="overflow: hidden; position: relative;"><ul class="slides" style="width: 1600%; transition-duration: 0s; transform: translate3d(-9114px, 0px, 0px);">
-	    <li class="clone" style="width: 1519px; float: left; display: block;"><a href="#"><img src="/static/recommend/banner.jpg" alt=""></a></li>
-            <li style="width: 1519px; float: left; display: block;" class=""><a href="#"><img src="/static/recommend/banner.jpg" alt=""></a></li>
-            <li style="width: 1519px; float: left; display: block;" class=""><a href="#"><img src="/static/recommend/banner.jpg" alt=""></a></li>
-            <li style="width: 1519px; float: left; display: block;" class=""><a href="#"><img src="/static/recommend/banner.jpg" alt=""></a></li>
-            <li style="width: 1519px; float: left; display: block;" class=""><a href="#"><img src="/static/recommend/banner.jpg" alt=""></a></li>
-            <li style="width: 1519px; float: left; display: block;" class=""><a href="#"><img src="/static/recommend/banner.jpg" alt=""></a></li>
-            <li style="width: 1519px; float: left; display: block;" class="flex-active-slide"><a href="#"><img src="/static/recommend/banner.jpg" alt=""></a></li>
-          <li style="width: 1519px; float: left; display: block;" class="clone"><a href="#"><img src="/static/recommend/banner.jpg" alt=""></a></li></ul>
-	</div><ol class="flex-control-nav flex-control-paging"><li><a class="">1</a></li><li><a class="">2</a></li><li><a class="">3</a></li><li><a class="">4</a></li><li><a class="">5</a></li><li><a class="flex-active">6</a></li></ol><ul class="flex-direction-nav"><li><a class="flex-prev" href="#">Previous</a></li><li><a class="flex-next" href="#">Next</a></li></ul></div>
-    </div>
-</div>
-<!--幻灯片-->
-
-
+<span class="x">
+	<form method="POST">
+	{% csrf_token %}
+    	<input type="text" placeholder="在此输入网址"  name="exp"  class="k"><input type="submit" value="网抑云一下" class="n">
+	</from>
+    <span class="t"></span>
+    </span>
 <div class="space_hx">&nbsp;</div>
 <div class="f_bg">
 	<div class="foot">

@@ -62,14 +62,16 @@ def draw_wordpic(song_id,comments):
     from PIL import Image
     import matplotlib.pyplot as plt
     import jieba
+    import numpy as np
     words = jieba.cut(",".join([comment['content'] for comment in comments]))
     words = list(words)
+    bgimg = np.array(Image.open("/home/ubuntu/shejisai/static/image/"+'music_bg.png'))
+    wc_img = WordCloud(mask = bgimg,scale=4,max_font_size = 80,random_state=20,background_color ="white",font_path = '/home/ubuntu/shejisai/static/fonts/msyh.ttc').generate(" ".join(words))
 
-    wc_img = WordCloud(scale=4,max_font_size = 80,random_state=20,background_color ="white",font_path = '/home/ubuntu/shejisai/static/fonts/msyh.ttc').generate(" ".join(words))
-
-    plt.figure(figsize = (9,4)) 
+    plt.figure(figsize = (4,5)) 
     plt.axis('off')
     plt.imshow(wc_img)
+    plt.tight_layout()
     plt.savefig("/home/ubuntu/shejisai/static/image/"+str(song_id)+".jpg",dpi=300)
 
 if __name__ == "__main__":
